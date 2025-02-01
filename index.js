@@ -12,11 +12,11 @@ const apiEndpoints = [
 async function fetchData() {
     try {
         const responses = await Promise.all(apiEndpoints.map(url => axios.get(url)));
-        const data = responses.map(res => res.data);
+        // const data = responses.map(res => res.data);
         
-        console.log('Fetched Data:', data);
+        // console.log('Fetched Data:', data);
     } catch (error) {
-        console.error('Error fetching data:', error);
+        // console.error('Error fetching data:', error);
     }
 }
 
