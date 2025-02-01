@@ -4,10 +4,10 @@ const app = express();
 const PORT = 3000;
 // List of API endpoints
 const apiEndpoints = [
-    'https://faqs-zdpc.onrender.com/api/faqs',
+    'https://faqs-eaqk.onrender.com/api/faqs',
     'https://free-translate-go-api.onrender.com/translate',
-    "https://paytm-ym3c.onrender.com",
-    "https://loop-7os2.onrender.com"
+    "https://paytm-ym3c.onrender.com"
+    
 ];
 
 // Function to fetch data from all endpoints
@@ -22,11 +22,11 @@ async function fetchData() {
     }
 }
 
-// Run fetchData every 1 minute
-setInterval(fetchData, 60 * 1000);
+// Run fetchData every 5 minute
+setInterval(fetchData, 5 * 60 * 1000);
 
 app.get('/', (req, res) => {
-    res.send('Fetching data from APIs every 1 minute...');
+    res.send('Fetching data from APIs every 5 minute...');
 });
 
 app.listen(PORT, () => {
