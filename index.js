@@ -6,7 +6,8 @@ const PORT = 3000;
 const apiEndpoints = [
     'https://faqs-eaqk.onrender.com/api/faqs',
     'https://free-translate-go-api.onrender.com/translate',
-    "https://paytm-ym3c.onrender.com"
+    "https://paytm-ym3c.onrender.com",
+    "https://loop-1.onrender.com"
     
 ];
 
