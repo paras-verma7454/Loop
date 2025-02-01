@@ -7,7 +7,7 @@ const apiEndpoints = [
     'https://faqs-eaqk.onrender.com/api/faqs',
     'https://free-translate-go-api.onrender.com/translate',
     "https://paytm-ym3c.onrender.com",
-    "https://loop-1.onrender.com"
+    "https://loop-7os2.onrender.com"
     
 ];
 
