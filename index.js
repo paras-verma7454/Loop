@@ -5,7 +5,8 @@ const PORT = 3000;
 // List of API endpoints
 const apiEndpoints = [
     'https://faqs-zdpc.onrender.com/api/faqs',
-    'https://free-translate-go-api.onrender.com/translate'
+    'https://free-translate-go-api.onrender.com/translate',
+    "https://paytm-ym3c.onrender.com/"
 ];
 
 // Function to fetch data from all endpoints
