@@ -1,5 +1,7 @@
 const axios = require('axios');
-
+const express = require('express');
+const app = express();
+const PORT = 3000;
 // List of API endpoints
 const apiEndpoints = [
     'https://faqs-zdpc.onrender.com/api/faqs',
@@ -10,16 +12,22 @@ const apiEndpoints = [
 async function fetchData() {
     try {
         const responses = await Promise.all(apiEndpoints.map(url => axios.get(url)));
-        // const data = responses.map(res => res.data); // Axios stores JSON in `res.data`
+        const data = responses.map(res => res.data);
         
-        // console.log('Fetched Data:', data);
+        console.log('Fetched Data:', data);
     } catch (error) {
-        console.error('Error fetching data:', error.message);
+        console.error('Error fetching data:', error);
     }
 }
-
 
 // Run fetchData every 1 minute
 setInterval(fetchData, 60 * 1000);
 
-console.log('Fetching data from APIs every 1 minute...');
+app.get('/', (req, res) => {
+    res.send('Fetching data from APIs every 1 minute...');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
